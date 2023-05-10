@@ -1,82 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="icon" href="./files/logo.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">   
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   
 
-<body class="contactbody">
-           <nav>
-            <img src="./files/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+<!-- Animation CSS only -->
 
-            <ul class="navbar">
-                <li>
+    <style media="screen">
+    * {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: sans-serif;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+background: #0c0116;
+}
+
+.form {
+position: relative;
+padding: 60px 15px;
+width: 270px;
+height: 350px;
+background: #0c0116;
+overflow: hidden;
+box-shadow: 0px 0px 10px 0px rgb(116, 119, 114);
+border-radius: 5px;
+}
+
+.form-inner {
+position: absolute;
+height: 98%;
+width: 98%;
+top: 50%;
+left: 50%;
+background: #0c0116;
+transform: translate(-50%, -50%);
+}
+
+.content {
+height: 100%;
+width: 100%;
+padding: 25px;
+}
+.form-inner h2 {
+font-size: 25px;
+color: #d7a3d7;
+text-align: center;
+padding-top: 35px;
+}
+.input {
+display: block;
+padding: 12px 15px;
+width: 100%;
+left: 50%;
+border-radius: 10px;
+margin-top: 20px;
+border: 1.5px solid rgb(109, 87, 121);
+outline: none;
+background: #19052c;
+color: white;
+}
+
+.btn {
+cursor: pointer;
+color: white;
+margin-top: 40px;
+width: 100%;
+padding: 12px;
+outline: none;
+background: #800080;
+border: none;
+font-size: 18px;
+border-radius: 10px;
+transition: 0.4s;
+}
+.btn:hover {
+background: #c907c9;
+}
+
+.form span {
+position: absolute;
+height: 50%;
+width: 50%;
+
+}
+
+.form span:nth-child(1) {
+background: #ffda05;
+top: 0;
+left: -48%;
+animation: 5s span1 infinite linear;
+animation-delay: 1s;
+}
+.form span:nth-child(2) {
+background: #00a800;
+bottom: 0;
+right: -48%;
+animation: 5s span2 infinite linear;
+}
+.form span:nth-child(3) {
+background: #800080;
+right: -48%;
+top: 0px;
+animation: 5s span3 infinite linear;
+}
+.form span:nth-child(4) {
+background: #ff0000;
+bottom: 0;
+right: -48%;
+animation: 5s span4 infinite linear;
+animation-delay: 1s;
+}
+
+@keyframes span1 {
+0% {
+  top: -48%;
+  left: -48%;
+}
+25% {
+  top: -48%;
+  left: 98%;
+}
+50% {
+  top: 98%;
+  left: 98%;
+}
+75% {
+  top: 98%;
+  left: -48%;
+}
+100% {
+  top: -48%;
+  left: -48%;
+}
+}
+@keyframes span2 {
+0% {
+  bottom: -48%;
+  right: -48%;
+}
+25% {
+  bottom: -48%;
+  right: 98%;
+}
+50% {
+  bottom: 98%;
+  right: 98%;
+}
+75% {
+  bottom: 98%;
+  right: -48%;
+}
+100% {
+  bottom: -48%;
+  right: -48%;
+}
+}
+@keyframes span3 {
+0% {
+  top: -48%;
+  left: -48%;
+}
+25% {
+  top: -48%;
+  left: 98%;
+}
+50% {
+  top: 98%;
+  left: 98%;
+}
+75% {
+  top: 98%;
+  left: -48%;
+}
+100% {
+  top: -48%;
+  left: -48%;
+}
+}
+
+@keyframes span4 {
+0% {
+  bottom: -48%;
+  right: -48%;
+}
+25% {
+  bottom: -48%;
+  right: 98%;
+}
+50% {
+  bottom: 98%;
+  right: 98%;
+}
+75% {
+  bottom: 98%;
+  right: -48%;
+}
+100% {
+  bottom: -48%;
+  right: -48%;
+}
+}
+
+/* Add this to your existing styles */
+a {
+  color: #d7a3d7;
+  font-size: 18px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c907c9;
+}
+
+
+    </style>
+
+
+
+
+    <title>Login</title>
+  </head>
+  <body>
+
+
+            
                     <a href="./index.html">Home</a>
                     <a href="./index.html#locations">Locations</a>
                     <a href="./index.html#package">Packages</a>
                     <a href="./about.html">About Us</a>
                     <a href="./contact.html">Contact Us</a>
-                </li>
-            </ul>
-        </nav>
 
-        <section class="contact">
-            <div class="contact-form">
-                <h1>Contact <span>Us</span></h1>
-                <p>We are always out there to help you! Fill out the form given below and get a reply from us within 2 business days.</p>
-            <form action="">
-                <input type="text" name="myname" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your E-mail" required>
-                <input type="text" name="subject" placeholder="What brings you here?" required>
-                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Submit" class="submit-btn">
-            </form>
-            </div>
-            
-        </section>
 
-<!-- Footer -->
+         
+    <form action="" class="form">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="form-inner">
+        <h2>LOGIN</h2>
+        <div class="content">
+          <input class="input" type="text" placeholder="Email" />
+          <input class="input" type="Message" placeholder="Your Message" />
+          &nbsp;
+     
 
-<section class="footer">
-    <div class="foot">
-        <div class="footer-content">
-            
-            <div class="footlinks">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="./register.html">Register</a></li>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
-                </ul>
-            </div>
 
-            <div class="footlinks">
-                <h4>Connect</h4>
-                <div class="social">
-                    <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
-                    <a href="#" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                    <a href="#" target="_blank"><i class='bx bxl-twitter' ></i></a>
-                    <a href="#" target="_blank"><i class='bx bxl-youtube' ></i></a>
-                </div>
-            </div>
-            
-        </div>
-    </div>
+           
+                
+          <button class="btn">Submit</button></div>
+      </div>
 
-    <div class="end">
-       <p>Copyright © 2023 NFOT.<br>Website developed by: FNHS</p>
-    </div>
-</section>
 
-</body>
+    </form>
+  </body>
 </html>
